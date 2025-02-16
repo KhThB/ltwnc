@@ -1,0 +1,39 @@
+
+ 
+  .checkout_section {
+    text-align: center;
+    
+  }
+  
+  .form-group {
+    margin-bottom:0px;
+    text-align: center;
+    display:flexbox;
+    flex-direction: column;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 0px;
+  }
+ 
+ 
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  nav {
+    position: relative; /* Không nên là absolute nếu không cần */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    z-index: 1;
+}
+.login_bt{
+    position: relative;
+    z-index: 1;
+}

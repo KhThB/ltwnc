@@ -1,0 +1,109 @@
+
+/* CSS cho giỏ hàng */
+.cart_section {
+    padding: 50px 0;
+}
+
+.cart_title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+.cart-product-image {
+    width: 100px;
+    height: auto;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    text-align: right;
+}
+
+    .cart-summary p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .cart-summary .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    .btn-danger:hover {
+        background-color: darkred;
+    }
+
+.btn-primary, .btn-success {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+    .btn-primary:hover, .btn-success:hover {
+        opacity: 0.8;
+    }
+
+.text-right {
+    text-align: right;
+}
+
+.cart-product-image {
+    width: 100px;
+    height: auto;
+}
+
+.product_section {
+    margin-top: 80px; /* Tạo khoảng cách trên cho phần danh sách sản phẩm */
+    padding: 20px 0; /* Giảm padding để tiết kiệm không gian */
+    max-height: 80vh; /* Giới hạn chiều cao nếu muốn phần này có thể cuộn */
+    overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung quá dài */
+}
+
+.section_title {
+    font-size: 24px; /* Điều chỉnh kích thước font của tiêu đề */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề */
+}
+
+.product_section .container {
+    max-width: 90%; /* Thu hẹp chiều rộng của container */
+    margin: 0 auto; /* Căn giữa phần container */
+}

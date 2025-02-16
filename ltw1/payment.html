@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Doze Cafe</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+<body>
+    <div class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index-login.html"><img src="images/doze-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-login.html">TRANG CHỦ</a>
+                        </li>
+
+                        <li class="nav-item  active">
+                            <a class="nav-link" href="menu-login.html">SẢN PHẨM</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog-login.html">Blog</a>
+                        </li>
+                        <!-- Thêm mục giỏ hàng -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <i class="bx bx-cart" aria-hidden="true"></i> Giỏ Hàng
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="login_bt">
+                            <ul>
+                                <li><a href="accinfo.html"><i class='bx bxs-user'></i></a></li>
+                                <li><a href="timkiem-login.html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Checkout Section -->
+    <div class="checkout_section">
+        <div class="container">
+            <h2 class="checkout_title" style="text-align:center">Thanh Toán</h2>
+            <form action="#" method="post" class="checkout_form">
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="fullname">Họ và tên:</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" value="Nguyễn Văn A">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="abcxyz@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="0123456789">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="address">Địa chỉ giao hàng:</label>
+                        <textarea class="form-control" id="address" name="address" placeholder="Nhập địa chỉ" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label for="payment">Phương thức thanh toán:</label>
+                        <select class="form-control" id="payment" name="payment">
+                            <option value="cash_on_delivery">Thanh toán khi nhận hàng</option>
+                            <option value="credit_card">Thẻ tín dụng</option>
+                            <option value="bank_transfer">Chuyển khoản ngân hàng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Form nhập thông tin thẻ tín dụng -->
+                <div id="credit-card-form" style="display: none; margin-top: 20px;">
+                    <h4>Thông tin thẻ tín dụng</h4>
+                    <div class="form-group">
+                        <label for="card-number">Số thẻ:</label>
+                        <input type="text" class="form-control" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-holder">Tên chủ thẻ:</label>
+                        <input type="text" class="form-control" id="card-holder" name="card-holder" placeholder="Nguyễn Văn A">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Ngày hết hạn:</label>
+                        <input type="month" class="form-control" id="expiry-date" name="expiry-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123">
+                    </div>
+                </div>
+
+                <!-- Thông tin chuyển khoản ngân hàng -->
+                <div id="bank-transfer-form" style="display: none; margin-top: 20px;">
+                    <h4>Thông tin chuyển khoản ngân hàng</h4>
+                    <p><strong>Tên ngân hàng:</strong> Ngân hàng VCB</p>
+                    <p><strong>Số tài khoản:</strong>1035188895</p>
+                    <p><strong>Tên chủ tài khoản:</strong> Doze Coffe</p>
+                    <h5>Quét mã QR để thanh toán:</h5>
+                    <img src="images/maqr.jpg" alt="QR Code" style="width: 200px; height: 200px;">
+                </div>
+        </div>
+        </form>
+        <button type="submit" class="btn btn-primary btn-block" onclick="myFunction3()">Xác Nhận Thanh Toán</button>
+        <script>
+            function myFunction3() {
+                alert("Thanh toán thành công!");
+                window.location.href = 'menu-login.html';
+            }
+        </script>
+    </div>
+    
+
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

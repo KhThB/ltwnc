@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Doze Cafe</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #ff6600;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .header .logo img {
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .search-bar {
+            margin: auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #e65c00;
+        }
+
+        .product_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            gap: 20px;
+            max-width: 1200px;
+        }
+
+        .product_item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product_item:hover {
+            transform: scale(1.05);
+        }
+
+        .product_item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product_item h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product_item p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .product_item .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: white;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .product_item .btn:hover {
+            background-color: #e65c00;
+        }
+
+        .pagination {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 0 5px;
+            color: #ff6600;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .pagination a.active {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+        }
+
+        .pagination a:hover {
+            background-color: #e65c00;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html"><img src="images/doze-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">SẢN PHẨM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="login_bt">
+                            <ul>
+                                <li><a href="login.html">Đăng Nhập</a></li>
+                                <li><a href="timkiem.html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <!-- banner section start -->
+        <div class="banner_section layout_padding">
+            <div class="container">
+                <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="banner_img"><img src="images/doze1.png" alt="Doze Cafe"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="banner_taital_main">
+                                        <h5 class="tasty_text">2019-2024</h5>
+                                        <p class="banner_text">Mang đến trải nghiệm cà phê đích thực với hương vị đặc trưng từ những hạt cà phê chất lượng cao.</p>
+                                        <p class="banner_text">Với không gian ấm cúng và phong cách hiện đại, chúng tôi là điểm đến lý tưởng cho những ai yêu thích sự thư giãn và sáng tạo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm...">
+        <button onclick="searchProducts()">Tìm kiếm</button>
+    </div>
+    
+    <div class="product_list" id="productList">
+        <!-- Sản phẩm sẽ được thêm vào đây qua JavaScript -->
+        <div class="product_item">
+            <img src="images/phinsuada.jpg" alt="Cà Phê Sữa Đá" class="product_image">
+            <h3 class="product_name">Cà Phê Sữa Đá</h3>
+            <p class="product_price">30,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/phindenda.jpg" alt="Cà Phê Đen Đá" class="product_image">
+            <h3 class="product_name">Cà Phê Đen Đá</h3>
+            <p class="product_price">25,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/bacxiuda.jpg" alt="Bạc Xỉu Đá" class="product_image">
+            <h3 class="product_name">Bạc Xỉu Đá</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+        
+        <!-- Thêm các sản phẩm khác tại đây -->
+        <div class="product_item">
+            <img src="images/frztraxanh.jpg" alt="Matcha Đá Xay" class="product_image">
+            <h3 class="product_name">Matcha Đá Xay</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/frzchoco.jpg" alt="Chocolate Đá Xay" class="product_image">
+            <h3 class="product_name">Chocolate Đá Xay</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/frzclassic.jpg" alt="Cà Phê Đá Xay" class="product_image">
+            <h3 class="product_name">Cà Phê Đá Xay</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/trathachdao.jpg" alt="Trà Thạch Đào" class="product_image">
+            <h3 class="product_name">Trà Thạch Đào</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/trasenvang.jpg" alt="Trà Sen Vàng" class="product_image">
+            <h3 class="product_name">Trà Sen Vàng</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+
+        <div class="product_item">
+            <img src="images/trathanhdao.jpg" alt="Trà Thanh Đào" class="product_image">
+            <h3 class="product_name">Trà Thanh Đào</h3>
+            <p class="product_price">50,000 VND</p>
+            <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+            <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
+        </div>
+    
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+   
+    </div>
+    <script src="js/menu.js"></script> <!-- Đảm bảo rằng bạn đã thêm đúng link tới file menu.js -->
+    <script>
+        function searchProducts() {
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let products = document.getElementsByClassName('product_item');
+            for (let i = 0; i < products.length; i++) {
+                let name = products[i].getElementsByTagName('h3')[0].innerText.toUpperCase();
+                if (name.includes(input)) {
+                    products[i].style.display = '';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

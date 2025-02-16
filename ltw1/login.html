@@ -1,0 +1,46 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>ĐĂNG NHẬP</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Tên tài khoản">
+                <i class='bx bx-user-circle'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Mật khẩu">
+                <i class='bx bx-lock'></i>
+            </div>
+            <div class="remember-forgor">
+                <label> <input type="checkbox">Ghi nhớ đăng nhập</label>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+
+            <button type="button" class="btn" onclick="myFunction()">Đăng nhập</button>
+            <script>
+                function myFunction() {
+                    alert("Đăng nhập thành công");
+                    window.location.href = 'index-login.html';
+                }
+            </script>
+
+            <div class="register-link">
+                <p>Bạn chưa có tài khoản?</p> <a href="register.html">Đăng kí ngay!</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
