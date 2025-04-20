@@ -245,10 +245,10 @@ button {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 10px 15px;
-    font-size: 17px;
+    padding: 0.625rem 0.9375rem;
+    font-size: 1,0625rem;
     color: #a9a8a8;
-    border-radius: 5px;
+    border-radius: 0.3125rempx;
     text-transform: uppercase;
 }
 
@@ -279,7 +279,7 @@ button {
 }
 
 .login_bt {
-    width: 150px;
+    width: 9.375rem;
 }
 
     .login_bt ul {
@@ -331,7 +331,7 @@ button {
     font-size: 92px;
     color: #ff4d00;
     font-weight: 700;
-    font-: ;
+    font-size:16px ;
 }
 
 .banner_text {
@@ -520,15 +520,14 @@ button {
         }
 
 #main_slider a.carousel-control-prev {
-    left: -50px;
+    left: -60px;
     top: 140px;
 }
 
 #main_slider a.carousel-control-next {
     right: -50px;
     top: 140px;
-    color: #fefefd;
-    background-color: #4a4949;
+   
 }
 
 #main_slider .carousel-control-next,
@@ -537,8 +536,8 @@ button {
     height: 55px;
     opacity: 1;
     font-size: 16px;
-    color: #4a4949;
-    background-color: #efefef;
+    color: #efefef;
+    background-color: #ff4d00;
 }
 
     #main_slider .carousel-control-next:focus,
@@ -546,7 +545,7 @@ button {
     #main_slider .carousel-control-prev:focus,
     #main_slider .carousel-control-prev:hover {
         color: #fefefd;
-        background-color: #4a4949;
+        background-color: #ff4d00;
     }
 
 
@@ -558,6 +557,8 @@ button {
 .about_section {
     width: 100%;
     float: left;
+    background-image: url(../images/banner_bg.png);
+    background-size: 100% 100%;
     padding-bottom: 90px;
 }
 
@@ -581,12 +582,12 @@ button {
 .about_taital_box {
     width: 500px;
     float: left;
-    background-color: #FFFDD0;
+    background-color: #ffffff;
     height: auto;
     padding: 40px 20px 30px 20px;
     box-shadow: 0px 0px 30px 0px;
     position: absolute;
-    top: 1550px;
+    top: 1600px;
 }
 
 .image_iman {
@@ -595,13 +596,14 @@ button {
 }
 
 .about_img {
-    width: 100%;
+    width: 90%;
 }
 
 .about_taital_1 {
     width: 100%;
     float: left;
-    font-size: 30px;
+    font-size: 45px;
+    font-weight: 700;
     color: #3b3b3b;
 }
 
@@ -611,6 +613,7 @@ button {
     font-size: 16px;
     color: #232222;
     margin: 0px;
+    font-weight: 500;
 }
 
 .readmore_btn {
@@ -866,11 +869,20 @@ textarea#comment.massage-bt::placeholder {
     width: 100%;
     float: left;
     height: auto;
-    background-image: url(../images/footer-bg.png);
+    background-color: black;
     background-size: 100% 100%;
     padding: 90px 0px 0px 0px;
 }
 
+.address_text {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    color: #fefefd;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
 
 .footer_text {
     width: 60%;
@@ -880,7 +892,31 @@ textarea#comment.massage-bt::placeholder {
     text-align: center;
 }
 
+.location_text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
 
+.location_text ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.location_text li {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0px 0px 5px 0px;
+}
+
+.location_text li a {
+    color: #ffffff;
+}
+
+.location_text li a:hover {
+    color: #d07d6b;
+}
 
 .padding_left_10 {
     padding-left: 10px;
@@ -1072,9 +1108,6 @@ textarea#comment.update_mail::placeholder {
     text-align: center;
 }
 
-.pagination-item__icon {
-}
-
 .layout_padding_pagination {
     margin-top: 48px;
     margin-bottom: 32px;
@@ -1140,9 +1173,9 @@ textarea#comment.update_mail::placeholder {
     text-align: center;
 }
 
-.pagination-item__icon {
+/*.pagination-item__icon {
 }
-
+*/
 .layout_padding_pagination {
     margin-top: 48px;
     margin-bottom: 32px;
@@ -1312,14 +1345,121 @@ input[type="radio"] {
         background-color: #e60000;
     }
 
-.product_section {
-    padding: 100px;
-}
-
+/* product detail page */
 
 .product-detail-info{ 
     display: flex;
     flex-direction: column;
     align-content: baseline;
     padding-top: 80px;
+}
+
+.product_item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* Để định vị overlay */
+}
+/* Hiển thị overlay khi hover */
+
+.product_image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product_name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product_price {
+    font-size: 18px;
+    color: #ff6347;
+    margin-top: 5px;
+}
+.product_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Nền mờ để nổi bật nội dung */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Đặt nội dung ở dưới cùng */
+    align-items: flex-end; /* Đặt nội dung ở bên phải */
+    opacity: 0; /* Ẩn mặc định */
+    transition: opacity 0.3s ease; /* Hiệu ứng mượt mà */
+    border-radius: 10px; /* Đồng bộ với product_item */
+    padding:10px
+}
+
+.product_item:hover .product_overlay {
+    opacity: 1; /* Hiển thị khi hover */
+}
+
+.product_description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/* Filter Section */
+.filter_section {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.filter_section h2 {
+    font-size: 24px;
+    color: #3b3b3b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filter_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter_group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.filter_group select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+.filter_btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter_btn:hover {
+    background-color: #e5533d;
 }

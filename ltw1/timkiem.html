@@ -17,7 +17,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- Responsive-->
@@ -40,7 +39,7 @@
         }
 
         .header {
-            background-color: #ff6600;
+            background-color: #ff4d00;
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -69,7 +68,7 @@
             width: 70%;
             padding: 10px;
             font-size: 16px;
-            border: 2px solid #ff6600;
+            border: 2px solid #ff4d00;
             border-radius: 5px;
             outline: none;
         }
@@ -78,14 +77,14 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #ff6600;
+            background-color: #ff4d00;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .search-bar button:hover {
-            background-color: #e65c00;
+            background-color: #ff4d00;
         }
 
         .product_list {
@@ -134,7 +133,7 @@
             padding: 10px 15px;
             font-size: 14px;
             color: white;
-            background-color: #ff6600;
+            background-color: #ff4d00;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -142,7 +141,7 @@
         }
 
         .product_item .btn:hover {
-            background-color: #e65c00;
+            background-color: #ff4d00;
         }
 
         .pagination {
@@ -154,20 +153,20 @@
             display: inline-block;
             padding: 10px 15px;
             margin: 0 5px;
-            color: #ff6600;
+            color: #ff4d00;
             text-decoration: none;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
 
         .pagination a.active {
-            background-color: #ff6600;
+            background-color: #ff4d00;
             color: white;
             border: none;
         }
 
         .pagination a:hover {
-            background-color: #e65c00;
+            background-color: #ff4d00;
             color: white;
         }
     </style>
@@ -176,18 +175,17 @@
     <div class="header_section">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="index.html"><img src="images/doze-logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logo_new.PNG"></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item ">
                             <a class="nav-link" href="index.html">TRANG CHỦ</a>
                         </li>
-                        <li class="nav-item">
+
+                        <li class="nav-item active">
                             <a class="nav-link" href="menu.html">SẢN PHẨM</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
                         </li>
@@ -195,7 +193,7 @@
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
                             <ul>
-                                <li><a href="login.html">Đăng Nhập</a></li>
+                                <li><a href="login.html"><i class='bx bxs-user'></i></a></li>
                                 <li><a href="timkiem.html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -203,33 +201,9 @@
                 </div>
             </nav>
         </div>
-
-        <!-- banner section start -->
-        <div class="banner_section layout_padding">
-            <div class="container">
-                <div id="banner_slider" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="banner_img"><img src="images/doze1.png" alt="Doze Cafe"></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="banner_taital_main">
-                                        <h5 class="tasty_text">2019-2024</h5>
-                                        <p class="banner_text">Mang đến trải nghiệm cà phê đích thực với hương vị đặc trưng từ những hạt cà phê chất lượng cao.</p>
-                                        <p class="banner_text">Với không gian ấm cúng và phong cách hiện đại, chúng tôi là điểm đến lý tưởng cho những ai yêu thích sự thư giãn và sáng tạo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    
 
+       
 
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm...">
