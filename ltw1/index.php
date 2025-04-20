@@ -1,3 +1,25 @@
+<?php
+session_start();
+include 'db_connect.php';
+
+// Kiểm tra xem người dùng đã đăng nhập hay chưa
+$is_logged_in = isset($_SESSION['user_id']);
+$user_name = $is_logged_in ? $_SESSION['user_name'] : 'Khách';
+
+$store_info = [
+    'name' => 'Doze Cafe',
+    'address' => '123 Coffee Street, HCMC',
+    'description' => 'Chào mừng bạn đến với Doze Cafe, nơi cung cấp những loại cà phê ngon và trà thanh mát từ các nguyên liệu tự nhiên chất lượng nhất!'
+];
+
+// Đăng xuất người dùng
+if (isset($_GET['logout'])) {
+    session_unset(); // Hủy tất cả session
+    session_destroy(); // Hủy session
+    header("Location: index.php"); // Quay lại trang chủ
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -36,25 +58,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                            <a class="nav-link" href="index.php">TRANG CHỦ</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="menu.html">SẢN PHẨM</a>
+                            <a class="nav-link" href="menu.php">SẢN PHẨM</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
                         </li>
+                        <?php if ($is_logged_in): ?>
+                        <li class="nav-item"><a class="nav-link" href="cart.php">Giỏ hàng (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Đăng xuất</a></li>
+                    <?php else: ?>
+                        <li class="nav-item"><a class="nav-link" href="login.php?redirect_to=<?php echo urlencode($redirect_url); ?>">Đăng nhập</a></li>
+                    <?php endif; ?>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="login_bt">
-                            <ul>
-                                <li><a href="login.html"><i class='bx bxs-user'></i></a></li>
-                                <li><a href="timkiem.html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </form>
                 </div>
             </nav>
         </div>
